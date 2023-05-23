@@ -5,6 +5,9 @@ struct Constant {
     static let win_sound : String = "win"
     static let spin_sound : String = "spin"
     static let is_save_exist : String = "save_exist"
+    static let getBonus : String = "getBonus"
+    static let saveDeviceId : String = "saveDeviceId"
+    static let getDeviceId : String = "getDeviceId"
     
 }
 

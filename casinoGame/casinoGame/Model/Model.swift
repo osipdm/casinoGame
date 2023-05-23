@@ -1,13 +1,13 @@
 import UIKit
 import AVFoundation
-class Model{
+class Model {
     
     fileprivate static let modelInstance = Model()
     
     fileprivate init() {}
     
     static var instance : Model{
-        get{
+        get {
             return modelInstance
         }
     }
@@ -43,6 +43,28 @@ class Model{
         }
         player = try? AVAudioPlayer(contentsOf: url)
         player?.play()
+    }
+    
+    func saveDeviseId(id: String) {
+        UserDefaults.standard.set(id, forKey: Constant.saveDeviceId)
+    }
+    
+    var getBonus: Bool {
+        get {
+            return UserDefaults.standard.value(forKey: Constant.getBonus) as? Bool ?? true
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constant.getBonus)
+        }
+    }
+    
+    func getDeviseId() -> String {
+        return (UserDefaults.standard.value(forKey: Constant.getDeviceId) as? String ?? "" )
+    }
+    
+
+    func clearDeviseId() {
+        UserDefaults.standard.removeObject(forKey: Constant.getDeviceId)
     }
 }
 

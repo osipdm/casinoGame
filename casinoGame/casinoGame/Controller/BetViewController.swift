@@ -59,6 +59,9 @@ class BetViewController: UIViewController {
     
     @IBAction func spinButton(_ sender: Any) {
         spinAction()
+        if Model.instance.getBonus {
+            Model.instance.getBonus = false
+        }
     }
     
     //MARK: -  setup method
@@ -76,12 +79,25 @@ class BetViewController: UIViewController {
     }
     
     func startGame(){
-        if Model.instance.isFirstTime(){ // check if it's first time playing
-            Model.instance.updateScore(label: cashLabel, cash: 500)
-        }else{ // get last saved score
-            cashLabel.text = "\(Model.instance.getScore())$"
-        } // set max bet
-        stepper.maximumValue = Double(currentCash)
+        Model.instance.updateScore(label: self.cashLabel, cash: 300)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            guard let self = self else {return}
+            if Model.instance.getBonus {
+                let alert = UIAlertController(title: "БОНУС", message: "+200$ на первый депозит", preferredStyle: .alert)
+                alert.addAction( UIAlertAction(title: "Получить", style: .default, handler: { (_) in
+                    Model.instance.updateScore(label: self.cashLabel ,cash: 500)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                self.cashLabel.text = "\(Model.instance.getScore())$"
+//                if Model.instance.isFirstTime(){ // check if it's first time playing
+//                    Model.instance.updateScore(label: self.cashLabel, cash: 300)
+//                } else { // get last saved score
+//                    self.cashLabel.text = "\(Model.instance.getScore())$"
+//                } // set max bet
+                self.stepper.maximumValue = Double(self.currentCash)
+            }
+        }
     }
     
     func roll(){ // roll pickerview
@@ -118,18 +134,14 @@ class BetViewController: UIViewController {
         
         if counter == 3 { // winning
             Model.instance.play(sound: Constant.win_sound)
-//            animate(view: machineImageView, images: [#imageLiteral(resourceName: "machine"),#imageLiteral(resourceName: "machine_off")], duration: 1, repeatCount: 15)
-//            animate(view: cashImageView, images: [#imageLiteral(resourceName: "change"),#imageLiteral(resourceName: "extra_change")], duration: 1, repeatCount: 15)
             stepper.maximumValue = Double(currentCash)
             let random = Int.random(in: 2...6)
             let alert = UIAlertController(title: "BIG WIN", message: "Ваш выйгрыш \((100 + cashToRisk) * random)$", preferredStyle: .alert)
             let next = UIAlertAction(title: "Продолжить", style: .default)
             alert.addAction(next)
             present(alert, animated: true)
-//            userIndicatorlabel.text = "Ваш выйгрыш \(200 + cashToRisk * 2)$"
             Model.instance.updateScore(label: cashLabel,cash: (currentCash + 200) + (cashToRisk * 2))
         } else { // losing
-//            userIndicatorlabel.text = "Еще раз"
             Model.instance.updateScore(label: cashLabel,cash: (currentCash - cashToRisk))
         }
         
@@ -188,15 +200,6 @@ extension BetViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return 45
-    }
-    
-    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-            switch swipeGesture.direction {
-            case UISwipeGestureRecognizer.Direction.down: self.spinAction()
-            default:break
-            }
-        }
     }
 }
 
