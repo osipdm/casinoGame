@@ -7,7 +7,7 @@ struct Constant {
     static let is_save_exist : String = "save_exist"
     static let getBonus : String = "getBonus"
     static let saveDeviceId : String = "saveDeviceId"
-    static let getDeviceId : String = "getDeviceId"
+    static let saveHighScore : String = "saveHighScore"
     
 }
 

@@ -8,5 +8,6 @@ target 'casinoGame' do
   pod 'FirebaseRemoteConfig'
   pod 'FirebaseCore'
   pod 'FirebaseMessaging'
+  pod 'FirebaseAuth'
 
 end

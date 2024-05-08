@@ -23,7 +23,7 @@ class Model {
     // get last saved score
     func getScore() -> Int{
         let cash = UserDefaults.standard.integer(forKey: Constant.user_cash)
-        return cash <= 0 ? 500 : cash
+        return cash <= 0 ? 300 : cash
     }
     
     // check if it's first time playing
@@ -59,12 +59,21 @@ class Model {
     }
     
     func getDeviseId() -> String {
-        return (UserDefaults.standard.value(forKey: Constant.getDeviceId) as? String ?? "" )
+        return (UserDefaults.standard.value(forKey: Constant.saveDeviceId) as? String ?? "" )
     }
     
 
     func clearDeviseId() {
-        UserDefaults.standard.removeObject(forKey: Constant.getDeviceId)
+        UserDefaults.standard.removeObject(forKey: Constant.saveDeviceId)
+    }
+    
+    var getHighScore: Int {
+        get {
+            return UserDefaults.standard.value(forKey: Constant.saveHighScore) as? Int ?? 0
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constant.saveHighScore)
+        }
     }
 }
 

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		20B1EAA27E0877AB57759316 /* Pods_casinoGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D331DE385951F600A5B6BD8 /* Pods_casinoGame.framework */; };
+		84153D122A1F497300CAE8D5 /* SlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84153D102A1F497300CAE8D5 /* SlotViewController.swift */; };
+		84153D132A1F497300CAE8D5 /* SlotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84153D112A1F497300CAE8D5 /* SlotViewController.xib */; };
+		84153D162A1F497E00CAE8D5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84153D142A1F497E00CAE8D5 /* WebViewController.swift */; };
+		84153D172A1F497E00CAE8D5 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84153D152A1F497E00CAE8D5 /* WebViewController.xib */; };
+		84153D1A2A1F543E00CAE8D5 /* IPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84153D192A1F543E00CAE8D5 /* IPManager.swift */; };
+		84153D1D2A1F98D600CAE8D5 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84153D1C2A1F98D500CAE8D5 /* ResizeImage.swift */; };
 		8452A0742A1CDA89005525C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452A0732A1CDA89005525C8 /* AppDelegate.swift */; };
 		8452A0762A1CDA89005525C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452A0752A1CDA89005525C8 /* SceneDelegate.swift */; };
 		8452A07B2A1CDA89005525C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452A0792A1CDA89005525C8 /* Main.storyboard */; };
@@ -18,13 +24,18 @@
 		8452A0902A1CE403005525C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452A08F2A1CE403005525C8 /* Utils.swift */; };
 		8452A0942A1CE44C005525C8 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8452A0922A1CE44C005525C8 /* win.wav */; };
 		8452A0952A1CE44C005525C8 /* spin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8452A0932A1CE44C005525C8 /* spin.wav */; };
-		8452A0972A1D0D5E005525C8 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452A0962A1D0D5E005525C8 /* UserDefault.swift */; };
-		8452A0992A1D3E62005525C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8452A0982A1D3E62005525C8 /* GoogleService-Info.plist */; };
+		846E2BE42A1E2CCD00C8B48B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846E2BE32A1E2CCD00C8B48B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D331DE385951F600A5B6BD8 /* Pods_casinoGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_casinoGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42175D1DC2A0E6DE0071E2DC /* Pods-casinoGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-casinoGame.debug.xcconfig"; path = "Target Support Files/Pods-casinoGame/Pods-casinoGame.debug.xcconfig"; sourceTree = "<group>"; };
+		84153D102A1F497300CAE8D5 /* SlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotViewController.swift; sourceTree = "<group>"; };
+		84153D112A1F497300CAE8D5 /* SlotViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlotViewController.xib; sourceTree = "<group>"; };
+		84153D142A1F497E00CAE8D5 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		84153D152A1F497E00CAE8D5 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		84153D192A1F543E00CAE8D5 /* IPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPManager.swift; sourceTree = "<group>"; };
+		84153D1C2A1F98D500CAE8D5 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
 		8452A0702A1CDA89005525C8 /* casinoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = casinoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8452A0732A1CDA89005525C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8452A0752A1CDA89005525C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,8 +48,8 @@
 		8452A08F2A1CE403005525C8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8452A0922A1CE44C005525C8 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		8452A0932A1CE44C005525C8 /* spin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spin.wav; sourceTree = "<group>"; };
-		8452A0962A1D0D5E005525C8 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		8452A0982A1D3E62005525C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		846E2BE32A1E2CCD00C8B48B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		846E2BE52A1E357800C8B48B /* casinoGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = casinoGame.entitlements; sourceTree = "<group>"; };
 		A9767293379C19FFCD1505F5 /* Pods-casinoGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-casinoGame.release.xcconfig"; path = "Target Support Files/Pods-casinoGame/Pods-casinoGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84153D182A1F542B00CAE8D5 /* IPManager */ = {
+			isa = PBXGroup;
+			children = (
+				84153D192A1F543E00CAE8D5 /* IPManager.swift */,
+			);
+			path = IPManager;
+			sourceTree = "<group>";
+		};
 		8452A0672A1CDA89005525C8 = {
 			isa = PBXGroup;
 			children = (
@@ -75,18 +94,16 @@
 		8452A0722A1CDA89005525C8 /* casinoGame */ = {
 			isa = PBXGroup;
 			children = (
+				84153D182A1F542B00CAE8D5 /* IPManager */,
+				846E2BE52A1E357800C8B48B /* casinoGame.entitlements */,
 				8452A0932A1CE44C005525C8 /* spin.wav */,
 				8452A0922A1CE44C005525C8 /* win.wav */,
+				8452A09A2A1D4A3C005525C8 /* Resourse */,
 				8452A08E2A1CE3F4005525C8 /* Utils */,
 				8452A08B2A1CE3CF005525C8 /* Model */,
-				8452A0732A1CDA89005525C8 /* AppDelegate.swift */,
-				8452A0752A1CDA89005525C8 /* SceneDelegate.swift */,
 				8452A0912A1CE40D005525C8 /* Controller */,
-				8452A0792A1CDA89005525C8 /* Main.storyboard */,
-				8452A07C2A1CDA8A005525C8 /* Assets.xcassets */,
-				8452A07E2A1CDA8A005525C8 /* LaunchScreen.storyboard */,
 				8452A0812A1CDA8A005525C8 /* Info.plist */,
-				8452A0982A1D3E62005525C8 /* GoogleService-Info.plist */,
+				846E2BE32A1E2CCD00C8B48B /* GoogleService-Info.plist */,
 			);
 			path = casinoGame;
 			sourceTree = "<group>";
@@ -103,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8452A08F2A1CE403005525C8 /* Utils.swift */,
-				8452A0962A1D0D5E005525C8 /* UserDefault.swift */,
+				84153D1C2A1F98D500CAE8D5 /* ResizeImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -112,8 +129,24 @@
 			isa = PBXGroup;
 			children = (
 				8452A0892A1CDDDA005525C8 /* BetViewController.swift */,
+				84153D102A1F497300CAE8D5 /* SlotViewController.swift */,
+				84153D112A1F497300CAE8D5 /* SlotViewController.xib */,
+				84153D142A1F497E00CAE8D5 /* WebViewController.swift */,
+				84153D152A1F497E00CAE8D5 /* WebViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8452A09A2A1D4A3C005525C8 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				8452A0732A1CDA89005525C8 /* AppDelegate.swift */,
+				8452A0752A1CDA89005525C8 /* SceneDelegate.swift */,
+				8452A0792A1CDA89005525C8 /* Main.storyboard */,
+				8452A07C2A1CDA8A005525C8 /* Assets.xcassets */,
+				8452A07E2A1CDA8A005525C8 /* LaunchScreen.storyboard */,
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 		948E3D401D4D293B4089305E /* Frameworks */ = {
@@ -130,7 +163,6 @@
 				42175D1DC2A0E6DE0071E2DC /* Pods-casinoGame.debug.xcconfig */,
 				A9767293379C19FFCD1505F5 /* Pods-casinoGame.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,10 +228,12 @@
 			files = (
 				8452A0952A1CE44C005525C8 /* spin.wav in Resources */,
 				8452A0802A1CDA8A005525C8 /* LaunchScreen.storyboard in Resources */,
+				84153D132A1F497300CAE8D5 /* SlotViewController.xib in Resources */,
+				84153D172A1F497E00CAE8D5 /* WebViewController.xib in Resources */,
 				8452A0942A1CE44C005525C8 /* win.wav in Resources */,
 				8452A07D2A1CDA8A005525C8 /* Assets.xcassets in Resources */,
 				8452A07B2A1CDA89005525C8 /* Main.storyboard in Resources */,
-				8452A0992A1D3E62005525C8 /* GoogleService-Info.plist in Resources */,
+				846E2BE42A1E2CCD00C8B48B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,12 +286,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84153D122A1F497300CAE8D5 /* SlotViewController.swift in Sources */,
 				8452A0902A1CE403005525C8 /* Utils.swift in Sources */,
 				8452A0742A1CDA89005525C8 /* AppDelegate.swift in Sources */,
-				8452A0972A1D0D5E005525C8 /* UserDefault.swift in Sources */,
+				84153D1A2A1F543E00CAE8D5 /* IPManager.swift in Sources */,
 				8452A0762A1CDA89005525C8 /* SceneDelegate.swift in Sources */,
 				8452A08A2A1CDDDA005525C8 /* BetViewController.swift in Sources */,
 				8452A08D2A1CE3DA005525C8 /* Model.swift in Sources */,
+				84153D162A1F497E00CAE8D5 /* WebViewController.swift in Sources */,
+				84153D1D2A1F98D600CAE8D5 /* ResizeImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +355,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -379,6 +417,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -405,10 +444,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = casinoGame/casinoGame.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CBL7VW786L;
+				DEVELOPMENT_TEAM = V4ZVGJ55S9;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = casinoGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -422,7 +463,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.casinoGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slotGame.777;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -437,10 +478,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = casinoGame/casinoGame.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CBL7VW786L;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = casinoGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -454,7 +497,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.casinoGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slotGame.777;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
